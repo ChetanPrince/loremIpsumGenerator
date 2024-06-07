@@ -4,5 +4,17 @@
 }
 body{
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    
+    background-image: linear-gradient(to right, #9BDD7F, #52A330);
+    /* display: flex; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+}
+#input-container{
+    width: 90%;
+    background-color: lightblue;
+    border: 2px solid blue;
+    text-align: center;
+    line-height: 100px; 
 }
