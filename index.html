@@ -8,21 +8,69 @@
 
 </head>
 <body>
-    <!-- 
-        need label counter and slider for paragraph words per paragraph 
+    <!-- need label counter and slider for paragraph words per paragraph 
         need options tag with h1 to h6 elements and a placeholder or a tag  named tag
         need a select and option element to choose between yes and no
         need a button to perform an action based on above elements selection
-        need an empty div to write the text according to its demand
-        
-     -->
+        need an empty div to write the text according to its demand-->
         <div id="input-container">
-            <form class="para">
-                <label for="numOfPara">Slide or Enter Number Of Paragraphs to Generate: </label>
-                <input type="number" min="1" max="10" id="countOfPara"><br>
-                <input type="range" min="1" max="10" id="numOfPara">
-            </form>
-            
+     <!-- input of number of paragraph -->
+            <div id="noPara">
+                <form class="para">
+                    <label for="numOfPara">Slide or Enter Number Of Paragraphs to Generate: </label>
+                    <input type="number" min="1" max="10" class="numOfParaDisplay">
+                    <input type="range" min="1" max="10" class="numOfPara">
+                    </form>
+                    </div>
+<!--                     
+    <!-- input of wordCount of per paragraph -->
+            <div id="wordPerPara">
+                <form class="para">
+                    <label for="wordCount">Choose How many words you need per paragraph: </label>
+                    <input type="number" min="1" max="50" id="wordCount">
+                    <input type="range" min="1" max="50" id="rangeWordCount">
+                    </form>
+            </div>
+
+    <!-- choose HTML tag for paragraphs -->
+    <div id="html-tag">
+        <form class="para">
+            <label for="tags">Choose a html tag:</label>
+            <select name="htmlTags" id="tags">
+                <option value="h1">h1</option>
+                <option value="h2">h2</option>
+                <option value="h3">h3</option>
+                <option value="h4">h4</option>
+                <option value="h5">h5</option>
+                <option value="h6">h6</option>
+                <option value="p">p</option>
+                </select>
+                </form>
+                </div> 
+                
+    <!-- choose whether HTML tag is needed for paragraphs -->
+    <div id="yes-no">
+        <form class="para">
+            <label for="need-tags">Choose a html tag:</label>
+            <select name="NeedTags" id="need-tags">
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+                </select>
+                </form>
+                </div>
+                
+    <!-- Button Onclick  -->
+     <div id="btn">
+        <button id="generate">Generate Lorem Ipsum</button>
+     </div> -->
+    
+     <!-- Empty block to display result  -->
+     <div id="result">
+       
+
+     </div>
+
+
 
 
         </div>
