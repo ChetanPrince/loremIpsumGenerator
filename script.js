@@ -3,29 +3,27 @@ const loremIpsumText = "Lorem ipsum dolor sit amet, consectetur adipiscing elit,
 const result = document.getElementById("result");
 const btn = document.getElementById("generate");
 const paraInput = document.querySelectorAll(".para input");
-const numOfParaDisplay = document.querySelector("numOfParaDisplay");
-const numOfPara = document.querySelector("numOfPara");
+const numOfPara = document.querySelector(".numOfParaDisplay");
+const rangeOfPara = document.querySelector(".rangeOfPara");
 
 
 
 
 // const generateText = ()=>{
     paraInput.forEach(input =>{
-        input.addEventListener("blur", e =>{
+        input.addEventListener("input", e =>{
             let paraNum = parseInt(paraInput[0].value),
-            paraNumSlider = parseInt(paraInput[1].value),
-            wordCountNum = parseInt(paraInput[2].value),
-            wordCountSlider = parseInt(paraInput[3].value);
-            console.log(paraInput[2].value);
+            paraNumSlider = parseInt(paraInput[1].value);
+            // wordCountNum = parseInt(paraInput[2].value),
+            // wordCountSlider = parseInt(paraInput[3].value);
 
-
-            // if(e.target.className === "numOfParaDisplay"){
-            //     numOfPara = numOfParaDisplay.Value;
-            //     console.log(numOfPara);
-            //     }
-            //     else{
-            //         numOfParaDisplay = numOfPara.value;
-            //     }
+            if(e.target.className === "numOfPara"){
+                paraInput[1].value = paraNum;
+                console.log(paraNumSlider);
+                }
+                else{
+                   paraInput[0].value= paraNumSlider;
+                }
                 
                 })
                 })
