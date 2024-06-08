@@ -5,6 +5,8 @@ const btn = document.getElementById("generate");
 const paraInput = document.querySelectorAll(".para input");
 const numOfPara = document.querySelector(".numOfParaDisplay");
 const rangeOfPara = document.querySelector(".rangeOfPara");
+const wordCount = document.querySelector(".wordCount");
+const rangeWordCount = document.querySelector(".rangeWordCount");
 
 
 
@@ -18,13 +20,14 @@ const rangeOfPara = document.querySelector(".rangeOfPara");
             wordCountSlider = parseInt(paraInput[3].value);
             let wordGen = loremIpsumText.split(" ").slice(0, wordCountNum).join(" ");
 
-            if(e.target.className === "numOfPara"){
+            if(e.target.className === "numOfPara" || e.target.className === "wordCount"){
                 paraInput[1].value = paraNum;
+                paraInput[3].value = wordCountNum;
             result.innerHTML = `<p>${wordGen}</p><br>`.repeat(paraNum);
             }
             else{
                 paraInput[0].value= paraNumSlider;
-                
+                paraInput[2].value = wordCountSlider;
                 result.innerHTML = `<p>${wordGen}</p><br>`.repeat(paraNumSlider);
                 // console.log(typeof paraNumSlider);
                 }
