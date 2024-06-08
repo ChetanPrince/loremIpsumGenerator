@@ -14,22 +14,23 @@ const rangeOfPara = document.querySelector(".rangeOfPara");
         input.addEventListener("input", e =>{
             let paraNum = parseInt(paraInput[0].value),
             paraNumSlider = parseInt(paraInput[1].value),
-            wordCountNum = parseInt(paraInput[2].value);
-            // wordCountSlider = parseInt(paraInput[3].value);
+            wordCountNum = parseInt(paraInput[2].value),
+            wordCountSlider = parseInt(paraInput[3].value);
+            let wordGen = loremIpsumText.split(" ").slice(0, wordCountNum).join(" ");
 
             if(e.target.className === "numOfPara"){
                 paraInput[1].value = paraNum;
-
-            result.innerHTML = `<p>${loremIpsumText}</p><br>`.repeat(paraNum);
+            result.innerHTML = `<p>${wordGen}</p><br>`.repeat(paraNum);
             }
             else{
                 paraInput[0].value= paraNumSlider;
                 
-                result.innerHTML = `<p>${loremIpsumText}</p><br>`.repeat(paraNumSlider);
-                console.log(typeof paraNumSlider);
+                result.innerHTML = `<p>${wordGen}</p><br>`.repeat(paraNumSlider);
+                // console.log(typeof paraNumSlider);
                 }
+            
                 
-            console.log(typeof paraNum);
+         
                 })
                 })
                 // }
