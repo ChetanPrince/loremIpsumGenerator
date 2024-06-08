@@ -13,21 +13,26 @@ const rangeOfPara = document.querySelector(".rangeOfPara");
     paraInput.forEach(input =>{
         input.addEventListener("input", e =>{
             let paraNum = parseInt(paraInput[0].value),
-            paraNumSlider = parseInt(paraInput[1].value);
-            // wordCountNum = parseInt(paraInput[2].value),
+            paraNumSlider = parseInt(paraInput[1].value),
+            wordCountNum = parseInt(paraInput[2].value);
             // wordCountSlider = parseInt(paraInput[3].value);
 
             if(e.target.className === "numOfPara"){
                 paraInput[1].value = paraNum;
-                console.log(paraNumSlider);
-                }
-                else{
-                   paraInput[0].value= paraNumSlider;
+
+            result.innerHTML = `<p>${loremIpsumText}</p><br>`.repeat(paraNum);
+            }
+            else{
+                paraInput[0].value= paraNumSlider;
+                
+                result.innerHTML = `<p>${loremIpsumText}</p><br>`.repeat(paraNumSlider);
+                console.log(typeof paraNumSlider);
                 }
                 
+            console.log(typeof paraNum);
                 })
                 })
-        // }
+                // }
 
         
             

@@ -9,7 +9,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh; /* Full viewport height */
+    height: 100%; /* Full viewport height */
     /* line-height: 1rem; */
 }
 #input-container{
@@ -17,5 +17,6 @@ body{
     background-color: lightblue;
     border: 2px solid blue;
     text-align: center;
-    line-height: 100px; 
+    justify-content: center;
+    line-height: 3em;
 }
