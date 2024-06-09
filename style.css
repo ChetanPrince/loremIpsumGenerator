@@ -12,6 +12,14 @@ body{
     height: 100%; /* Full viewport height */
     /* line-height: 1rem; */
 }
+input, label{
+    margin-right: 5px;;
+}
+input, select{
+    border:none;
+    border-radius: 5px;
+    /* background-color:lightblue; */
+}
 #input-container{
     width: 90%;
     background-color: lightblue;
