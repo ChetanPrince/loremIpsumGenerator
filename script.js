@@ -7,7 +7,9 @@ const numOfPara = document.querySelector(".numOfParaDisplay");
 const rangeOfPara = document.querySelector(".rangeOfPara");
 const wordCount = document.querySelector(".wordCount");
 const rangeWordCount = document.querySelector(".rangeWordCount");
+const tags = document.querySelectorAll("#tagsInput option")
 
+console.log(tags[4].value)
     paraInput.forEach(input =>{
         input.addEventListener("input", e =>{
             let paraNum = parseInt(paraInput[0].value),
