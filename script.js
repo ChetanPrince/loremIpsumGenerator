@@ -8,40 +8,25 @@ const rangeOfPara = document.querySelector(".rangeOfPara");
 const wordCount = document.querySelector(".wordCount");
 const rangeWordCount = document.querySelector(".rangeWordCount");
 
-
-
-
-// const generateText = ()=>{
     paraInput.forEach(input =>{
         input.addEventListener("input", e =>{
             let paraNum = parseInt(paraInput[0].value),
             paraNumSlider = parseInt(paraInput[1].value),
             wordCountNum = parseInt(paraInput[2].value),
             wordCountSlider = parseInt(paraInput[3].value);
-            let wordGen = loremIpsumText.split(" ").slice(0, wordCountNum).join(" ");
-
-            if(e.target.className === "numOfPara" || e.target.className === "wordCount"){
+          if(e.target.className === "numOfPara" || e.target.className === "wordCount"){
                 paraInput[1].value = paraNum;
                 paraInput[3].value = wordCountNum;
-            result.innerHTML = `<p>${wordGen}</p><br>`.repeat(paraNum);
             }
             else{
                 paraInput[0].value= paraNumSlider;
                 paraInput[2].value = wordCountSlider;
-                result.innerHTML = `<p>${wordGen}</p><br>`.repeat(paraNumSlider);
                 }
-            
-                
-         
                 })
                 })
-                // }
-
-        
-            
-            
-// btn.addEventListener("click", generateText());
+btn.addEventListener("click", generateText);
 
 function generateText(){
-    
+    let wordGen = loremIpsumText.split(" ").slice(0, paraInput[3].value).join(" ");
+    result.innerHTML = `<p>${wordGen}</p><br>`.repeat(paraInput[1].value);
 }
