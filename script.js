@@ -29,7 +29,6 @@ const rangeWordCount = document.querySelector(".rangeWordCount");
                 paraInput[0].value= paraNumSlider;
                 paraInput[2].value = wordCountSlider;
                 result.innerHTML = `<p>${wordGen}</p><br>`.repeat(paraNumSlider);
-                // console.log(typeof paraNumSlider);
                 }
             
                 
@@ -41,4 +40,8 @@ const rangeWordCount = document.querySelector(".rangeWordCount");
         
             
             
-// btn.addEventListener("click", generateText);
+// btn.addEventListener("click", generateText());
+
+function generateText(){
+    
+}

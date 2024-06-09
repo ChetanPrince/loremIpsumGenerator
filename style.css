@@ -3,7 +3,7 @@
     padding: 0;
 }
 body{
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     background-image: linear-gradient(to right, #9BDD7F, #52A330);
     /* display: flex; */
     display: flex;
@@ -15,8 +15,27 @@ body{
 #input-container{
     width: 90%;
     background-color: lightblue;
-    border: 2px solid blue;
+    border: 2px solid grey;
     text-align: center;
     justify-content: center;
     line-height: 3em;
+    margin-top: 10px;
+    padding: 5px;
+    border-radius: 20px;;
+    box-shadow: 5px 10px 10px 4px grey;
+    }
+#generate{
+        border-radius: 10px;
+        border: none;
+        width: 200px;
+        height: 35px;
+        background-color:#972C6B;
+        color:white;
+        font-size: medium;
+        box-shadow: 2px 3px 5px 2px grey;
+        cursor: pointer;
+        }
+#generate:active{
+    background-color:#6b0dca;
+    transform: translate(2px, 2px);
 }
