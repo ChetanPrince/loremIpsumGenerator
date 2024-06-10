@@ -25,7 +25,7 @@ paraInput.forEach(input =>{
                 }
                 })
                 })
-                btn.addEventListener("click", generateText);
+   btn.addEventListener("click", generateText);
                 
     function generateText(){
     let wordGen = loremIpsumText.split(" ").slice(0, paraInput[3].value).join(" ");
