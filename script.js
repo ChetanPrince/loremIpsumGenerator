@@ -7,29 +7,17 @@ const numOfPara = document.querySelector(".numOfParaDisplay");
 const rangeOfPara = document.querySelector(".rangeOfPara");
 const wordCount = document.querySelector(".wordCount");
 const rangeWordCount = document.querySelector(".rangeWordCount");
-const tags = document.querySelectorAll("#tagsInput option");
-
-const word = ()=>{
-    for(let i = 0; i<tags.length; i++){
-        let tag = `<${tags[i].value}>`;
-        let tagEnd = `</${tags[i].value}>`;
-    console.log(tag, tagEnd);
-    }
-}
-word();
 
 
-
-
-    paraInput.forEach(input =>{
-        input.addEventListener("input", e =>{
-            let paraNum = parseInt(paraInput[0].value),
-            paraNumSlider = parseInt(paraInput[1].value),
-            wordCountNum = parseInt(paraInput[2].value),
-            wordCountSlider = parseInt(paraInput[3].value);
-          if(e.target.className === "numOfPara" || e.target.className === "wordCount"){
-                paraInput[1].value = paraNum;
-                paraInput[3].value = wordCountNum;
+paraInput.forEach(input =>{
+    input.addEventListener("input", e =>{
+        let paraNum = parseInt(paraInput[0].value),
+        paraNumSlider = parseInt(paraInput[1].value),
+        wordCountNum = parseInt(paraInput[2].value),
+        wordCountSlider = parseInt(paraInput[3].value);
+        if(e.target.className === "numOfPara" || e.target.className === "wordCount"){
+            paraInput[1].value = paraNum;
+            paraInput[3].value = wordCountNum;
             }
             else{
                 paraInput[0].value= paraNumSlider;
@@ -37,9 +25,23 @@ word();
                 }
                 })
                 })
-btn.addEventListener("click", generateText);
-
-function generateText(){
+                btn.addEventListener("click", generateText);
+                
+    function generateText(){
     let wordGen = loremIpsumText.split(" ").slice(0, paraInput[3].value).join(" ");
-    result.innerHTML = `<p>${wordGen}</p><br>`.repeat(paraInput[1].value);
+    
+    const tags = document.getElementById("tagsInput");
+    const selectedValue = tags.value;
+    const yesNo = document.getElementById("need-tags");
+    const yesNoVal = yesNo.value;
+    console.log(yesNoVal);
+    if(yesNoVal === "yes"){
+        result.innerHTML = `<${selectedValue}>${wordGen}</${selectedValue}><br>`.repeat(paraInput[1].value);
+        }
+        else{
+
+            result.innerHTML = `<p>${wordGen}</p><br>`.repeat(paraInput[1].value);
+        }
+    
     }
+    
